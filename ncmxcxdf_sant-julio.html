@@ -73,7 +73,7 @@
                 </tr>
                 <tr>
                   <td>Mails</td>
-                  <td>SLA 48hs</td>
+                  <td>SLA 24hs</td>
                   <td>-</td>
                 </tr>
               </tbody>
@@ -82,20 +82,122 @@
           </section>
           <section>
             <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+             <h5>% FCR</h5><iframe style="overflow:hidden;margin:2px 2px auto auto;" scrolling="no" id="chart-fcr" data-chart></iframe>
+             <h5>% NPS Gral</h5><iframe style="overflow:hidden;margin:2px 2px auto auto;" scrolling="no" id="chart-nps-gral" data-chart></iframe>
+             <h5>% NPS Oper</h5><iframe style="overflow:hidden;margin:2px 2px auto auto;" scrolling="no" id="chart-nps-oper" data-chart></iframe>
+          </section>
+          <section>
+            <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
             <h3>NPS 1 al 25 de Julio </h3>
             <table>
               <thead>
                 <tr>
-                  <th>NPS Pregunta 1</th>
+                  <th>Skill</th>
+                  <th>Encuestas</th>
                   <th>FCR</th>
-                  <th>NPS Pregunta 3</th>
+                  <th>NPS G</th>
+                  <th>NPS O</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>69%</td>
+                  <td>Tarjetas de Crédito</td>
+                  <td>6057</td>
                   <td>91%</td>
+                  <td>69%</td>
                   <td>85%</td>
+                </tr>
+                <tr>
+                  <td>Tarjetas de Débito</td>
+                  <td>2189</td>
+                  <td>89%</td>
+                  <td>69%</td>
+                  <td>84%</td>
+                </tr>
+                <tr>
+                  <td>Cuentas</td>
+                  <td>1855</td>
+                  <td>87%</td>
+                  <td>69%</td>
+                  <td>84%</td>
+                </tr>
+                <tr>
+                  <td>Denuncias</td>
+                  <td>1252</td>
+                  <td>90%</td>
+                  <td>68%</td>
+                  <td>83%</td>
+                </tr>
+                <tr>
+                  <td>Retenciones</td>
+                  <td>1192</td>
+                  <td>97%</td>
+                  <td>65%</td>
+                  <td>87%</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h3>NPS 1 al 25 de Julio </h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Prestamos</td>
+                  <td>651</td>
+                  <td>88%</td>
+                  <td>70%</td>
+                  <td>83%</td>
+                </tr>
+                <tr>
+                  <td>SoySantander</td>
+                  <td>420</td>
+                  <td>94%</td>
+                  <td>69%</td>
+                  <td>86%</td>
+                </tr>
+                <tr>
+                  <td>SELECT</td>
+                  <td>385</td>
+                  <td>89%</td>
+                  <td>70%</td>
+                  <td>87%</td>
+                </tr>
+                <tr>
+                  <td>Sucursales</td>
+                  <td>204</td>
+                  <td>93%</td>
+                  <td>82%</td>
+                  <td>93%</td>
+                </tr>
+                <tr>
+                  <td>Seguros</td>
+                  <td>137</td>
+                  <td>89%</td>
+                  <td>75%</td>
+                  <td>88%</td>
+                </tr>
+                <tr>
+                  <td>SuperNet</td>
+                  <td>93</td>
+                  <td>89%</td>
+                  <td>66%</td>
+                  <td>90%</td>
+                </tr>
+                <tr>
+                  <td>Pymes</td>
+                  <td>65</td>
+                  <td>87%</td>
+                  <td>55%</td>
+                  <td>73%</td>
+                </tr>
+                <tr>
+                  <td>Activación TD</td>
+                  <td>54</td>
+                  <td>96%</td>
+                  <td>61%</td>
+                  <td>76%</td>
                 </tr>
               </tbody>
             </table>
@@ -209,6 +311,15 @@
 
           </section>
         </section>
+
+        <section>
+          <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+
+          <h5>Principales Motivos</h5><iframe style="overflow:hidden;margin:2px 2px auto auto;" scrolling="no" id="chart-motivos" data-chart></iframe>
+
+          <img data-src="img/SubMotivos.png" style="background: none; border: none; box-shadow: none;">
+
+        </section>
         <section>
           <section>
             <img data-src="img/Atencion_ML.png" style="background: none; border: none; box-shadow: none;">
@@ -233,6 +344,7 @@
         dependencies: [
           { src: 'plugin/markdown/marked.js' },
           { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/zoom-js/zoom.js' },
            // Chart.min.js
           { src: 'plugin/chartjs/chart.min.js'},
           // the plugin
@@ -421,20 +533,20 @@
               }
             },
             {
-            selector : "#chart-mail-marzo",
+            selector : "#chart-fcr",
             type : "doughnut",
             data : [
               {
-                value: 7482,
-                color:"#F7464A",
-                highlight: "#FF5A5E",
-                label: "Recibidos"
+                value: 91,
+                color:"green",
+                highlight: "green",
+                label: "%"
               },
               {
-                value: 5520,
-                color: "#46BFBD",
-                highlight: "#5AD3D1",
-                label: "Capacidad"
+                value: 8,
+                color: "red",
+                highlight: "red",
+                label: "%"
               }
               ],
               options : {
@@ -443,20 +555,20 @@
               }
             },
             {
-            selector : "#chart-mail-abril",
+            selector : "#chart-nps-gral",
             type : "doughnut",
             data : [
               {
-                value: 7784,
-                color:"#F7464A",
-                highlight: "#FF5A5E",
-                label: "Recibidos"
+                value: 69,
+                color:"green",
+                highlight: "green",
+                label: "%"
               },
               {
-                value: 4573,
+                value: 31,
                 color: "#46BFBD",
                 highlight: "#5AD3D1",
-                label: "Capacidad"
+                label: "%"
               }
               ],
               options : {
@@ -465,26 +577,84 @@
               }
             },
             {
-            selector : "#chart-mail-mayo",
+            selector : "#chart-nps-oper",
             type : "doughnut",
             data : [
               {
-                value: 5480,
-                color:"#F7464A",
-                highlight: "#FF5A5E",
-                label: "Recibidos"
+                value: 85,
+                color:"green",
+                highlight: "green",
+                label: "%"
               },
               {
-                value: 2760,
+                value: 15,
                 color: "#46BFBD",
                 highlight: "#5AD3D1",
-                label: "Capacidad"
+                label: "%"
               }
               ],
               options : {
                 percentageInnerCutout : 50,
                 responsive : true
               }
+            },
+            {
+              selector : "#chart-motivos",
+              type : "pie",
+              data : [
+                  {
+                    value: 38740,
+                    color:"#F7464A",
+                    highlight: "#FF5A5E",
+                    label: "Tarjeta de Crédito"
+                  },
+                  {
+                    value: 9321,
+                    color: "#46BFBD",
+                    highlight: "#5AD3D1",
+                    label: "Cuentas"
+                  },
+                  {
+                    value: 7380,
+                    color: "#FDB45C",
+                    highlight: "#FFC870",
+                    label: "Tarjeta de Débito"
+                  },
+                  {
+                    value: 5973,
+                    color: "#FFC123",
+                    highlight: "#FFC123",
+                    label: "Supernet"
+                  },
+                  {
+                    value: 4010,
+                    color: "#5AD748",
+                    highlight: "#5AD748",
+                    label: "Prestamos"
+                  },
+                  {
+                    value: 3563,
+                    color: "#FD1234",
+                    highlight: "#FD1234",
+                    label: "Central telefónica"
+                  },
+                  {
+                    value: 1550,
+                    color: "#FD9874",
+                    highlight: "#FD9874",
+                    label: "Seguros"
+                  },
+                  {
+                    value: 1711,
+                    color: "black",
+                    highlight: "#black",
+                    label: "Otros"
+                  },
+
+                ],
+                options : {
+                  responsive : true
+                }
             },
             {
             selector : "#chart-mail-ns-junio",
