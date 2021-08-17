@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <title>Multiline Presentación</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/moon.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" width="45%" height="25%" style="margin: none; background: none; border: none; box-shadow: none;">
+          <h2>Presentación - BGH</h2>
+          <p>
+            <small>Agosto 2021</small>
+          </p>
+        </section>
+        <!--
+        Plataformas de Multiline
+        -->
+        <section>
+          <section>
+            <h2>Plataformas de Multiline</h2>
+            <ul>
+              <li>Plataforma Omnichannel</li>
+              <li>Apoyo a la Operativa</li>
+              <li>CRM a medida</li>
+              <li>Plataforma de Calidad</li>
+            </ul>
+            <br>
+            <a href="#" class="navigate-down">
+              <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+            </a>
+          </section>
+          <section data-background="gif/IC_OCC.gif">
+            <h2>Plataforma Omnichannel de Atención</h2>
+          </section>
+
+          <section data-background="gif/Gestor_Operacion.gif">
+            <h2>Plataforma Apoyo a la Operativa</h2>
+          </section>
+
+          <section data-background="gif/Gestor_CRM.gif">
+            <h2>CRM a Medida</h2>
+          </section>
+
+          <section data-background="gif/Gestor_Calidad.gif">
+            <h2>Plataforma de Calidad</h2>
+          </section>
+
+        </section>
+        <!--
+        Prsentacion de Plataformas - Fin
+        -->
+
+        <section>
+          <section>
+            <img data-src="img/Atencion_ML.png" style="background: none; border: none; box-shadow: none;">
+            <h5>¡Muchas gracias!</h5>
+            <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none;height: 200px;">
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      // Demo Chart RevealJS
+      // https://dvenkatsagar.github.io/prez/reveal-chart.html
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+           // Chart.min.js
+          { src: 'plugin/chartjs/chart.min.js'},
+          // the plugin
+          { src: 'plugin/chartjs/charted.js'},
+
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ],
+        chart : {
+          // Taken from chartjs documentation
+          items : [
+            {
+              selector : "#chart-tmo",
+              type : "line",
+              data : {
+                labels: ["may-20","jun-20","jul-20","ago-20","sep-20","oct-20","nov-20","dic-20","ene-21","feb-21","mar-21","abr-21","may-21"],
+                datasets: [
+                  {
+                    label: "TMO",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [297,279,269,284,294,304,285,298,317,317,324,360,367]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+            {
+              selector : "#chart-productividad",
+              type : "line",
+              data : {
+                labels: ["nov-20","dic-20","ene-21","feb-21","mar-21","abr-21","may-21"],
+                datasets: [
+                  {
+                    label: "Productividad %",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [51,57,58,57,61,70,70]
+                  },
+                  {
+                    label: "NS %",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#red",
+                    pointHighlightFill: "#red",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [80,52,43,56,53,34,45]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+            {
+              selector : "#chart-eficiencia-agente",
+              type : "line",
+              data : {
+                labels: ["Mes 0","Mes 1","Mes 2","Mes 3","Mes 4","Mes 5","Mes 6","Mes 8","Mes 9","Mes 10","Mes 11","Mes 12","Mes 24"],
+                datasets: [
+                  {
+                    label: "Eficiencia %",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [-2,24,42,57,58,55,58,58,53,48,52,42,43]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+            {
+              selector : "#chart-proyeccion-escenarios",
+              type : "radar",
+              data : {
+                labels: ["Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre"],
+                datasets: [
+                  {
+                    label: "NS 85.000",
+                    fillColor: "rgba(151,187,205,0.2)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [43, 48, 53, 58, 63, 68]
+                  },
+                  {
+                    label: "NS 80.000",
+                    fillColor: "rgba(80,100,110,0.2)",
+                    strokeColor: "rgba(80,100,110,1)",
+                    pointColor: "rgba(80,100,110,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [50, 55, 60, 65, 70, 75]
+                  },
+                  {
+                    label: "NS 75.000",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [55, 60, 65, 70, 75, 80]
+                  },
+                  {
+                    label: "NS 70.000",
+                    fillColor: "rgba(80,100,110,0.2)",
+                    strokeColor: "rgba(80,100,110,1)",
+                    pointColor: "rgba(80,100,110,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [58, 63, 68, 73, 78, 83]
+                  },
+                  {
+                    label: "NS 65.000",
+                    fillColor: "rgba(151,187,205,0.2)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [62, 67, 72, 77, 82, 86]
+                  }
+                ]
+              },
+              options :{
+                responsive : true,
+                pointLabelFontSize : 15
+              }
+            },
+            // chart-eficiencia-mail
+            {
+              selector : "#chart-eficiencia-mail",
+              type : "line",
+              data : {
+                labels: ["21/05", "22/05", "24/05", "25/05"],
+                datasets: [
+                  {
+                    label: "Eficiencia +%",
+                    fillColor: "rgba(151,187,205,0.2)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [35, 86, 80, 80]
+                  },
+                  {
+                    label: "Emails Enviados",
+                    fillColor: "rgba(80,100,110,0.2)",
+                    strokeColor: "rgba(80,100,110,1)",
+                    pointColor: "rgba(80,100,110,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [406, 566, 540, 540]
+                  }
+                ]
+              },
+              options :{
+                responsive : true,
+                pointLabelFontSize : 15
+              }
+            },
+            {
+            selector : "#chart-mail-marzo",
+            type : "doughnut",
+            data : [
+              {
+                value: 7482,
+                color:"#F7464A",
+                highlight: "#FF5A5E",
+                label: "Recibidos"
+              },
+              {
+                value: 5520,
+                color: "#46BFBD",
+                highlight: "#5AD3D1",
+                label: "Capacidad"
+              }
+              ],
+              options : {
+                percentageInnerCutout : 50,
+                responsive : true
+              }
+            },
+            {
+            selector : "#chart-mail-abril",
+            type : "doughnut",
+            data : [
+              {
+                value: 7784,
+                color:"#F7464A",
+                highlight: "#FF5A5E",
+                label: "Recibidos"
+              },
+              {
+                value: 4573,
+                color: "#46BFBD",
+                highlight: "#5AD3D1",
+                label: "Capacidad"
+              }
+              ],
+              options : {
+                percentageInnerCutout : 50,
+                responsive : true
+              }
+            },
+            {
+            selector : "#chart-mail-mayo",
+            type : "doughnut",
+            data : [
+              {
+                value: 5480,
+                color:"#F7464A",
+                highlight: "#FF5A5E",
+                label: "Recibidos"
+              },
+              {
+                value: 2760,
+                color: "#46BFBD",
+                highlight: "#5AD3D1",
+                label: "Capacidad"
+              }
+              ],
+              options : {
+                percentageInnerCutout : 50,
+                responsive : true
+              }
+            },
+            {
+              selector : "#chart-tmo-chat",
+              type : "line",
+              data : {
+                labels: ["may-20","jun-20","jul-20","ago-20","sep-20","oct-20","nov-20","dic-20","ene-21","feb-21","mar-21","abr-21"],
+                datasets: [
+                  {
+                    label: "TMO",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [460,499,461,527,570,529,531,481,474,500,506,677]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+            {
+              selector : "#chart-volumen-chat",
+              type : "line",
+              data : {
+                labels: ["may-20","jun-20","jul-20","ago-20","sep-20","oct-20","nov-20","dic-20","ene-21","feb-21","mar-21","abr-21"],
+                datasets: [
+                  {
+                    label: "TMO",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [25424,26394,29282,9696,11375,12197,10163,13151,13318,11725,15256,15564]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+            {
+              selector : "#chart-proy-vs-proyectado-chat",
+              type : "line",
+              data : {
+                labels: ["may-20","jun-20","jul-20","ago-20","sep-20","oct-20","nov-20","dic-20","ene-21","feb-21","mar-21","abr-21"],
+                datasets: [
+                  {
+                    label: "Proyectado",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [28500,26208,28750,9880,12100,12390,12390,10668,11894,12618,14973,12540]
+                  },
+                  {
+                    label: "Recibidos",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#red",
+                    pointHighlightFill: "#red",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [25424,26394,29282,9696,11375,12197,10163,13151,13318,11725,15256,15564]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            }
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>
