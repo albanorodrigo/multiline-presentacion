@@ -28,38 +28,39 @@
       <div class="slides">
         <section>
           <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" width="45%" height="25%" style="margin: none; background: none; border: none; box-shadow: none;">
-          <p>Presentación - VisaNet Uruguay</p>
+          <p>Presentación - Correo Uruguayo</p>
           <p>
-            <small>2021</small>
+            <small>Setiembre - 2021</small>
           </p>
-        </section>
-        <section>
-          <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
-          <h2>Índice</h2>
-          <ul>
-            <li><a href="#/2">Multiline en números</a></li>
-            <li><a href="#/3">Recursos Tecnológicos</a></li>
-            <li><a href="#/4">Plataformas Operativas</a></li>
-            <li><a href="#/5">Clientes</a></li>
-            <li><a href="#/6">Dimensionamiento del servicio</a></li>
-            <li><a href="#/7">Cotización</a></li>
-          </ul>
         </section>
         <section>
           <section>
             <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 50px;">
-            <h2>Multiline en Números Anuales</h2>
-            <!-- <iframe class="stretch" id="chart-frame" data-chart></iframe> -->
-            <h4>+ 1.7M Llamadas Atendidas  | + 78K Mails Respondidos</h4>
-            <iframe id="chart-llamadas" style="overflow:hidden;margin:2px 2px auto auto;" scrolling="no" data-chart></iframe>
-            <iframe id="chart-mails" style="overflow:hidden;margin:2px 2px auto auto;" scrolling="no" data-chart></iframe>
-            
-            <h4>+ 96K Chats Atendidos  | +180K Sesiones de BOT</h4>
-            <iframe id="chart-chat" style="overflow:hidden;margin:2px 2px auto auto;" scrolling="no" data-chart></iframe>
-            <iframe id="chart-bot" style="overflow:hidden;margin:2px 2px auto auto;" scrolling="no" data-chart></iframe>
-
-
+            <h2>Situación Actual</h2>
+            <h4>Evolución de Tiempos en línea</h4>
           </section>
+          <section>
+            <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 50px;">
+             <iframe style="overflow:hidden;margin:5px 5px auto auto;" class="stretch" scrolling="no" id="chart-tmo" data-chart></iframe>
+             <small>En los últimos 8 meses presentamos una demora en la línea del 25% debido a las nuevas operativas que impactan directamente en los tiempos y efectividad de los agentes a nivel general</small>
+          </section>
+
+          <section>
+            <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 50px;">
+            <h2>Situación Actual</h2>
+            <h5>Aumento de la Productividad vs NS</h5>
+          </section>
+
+          <section>
+            <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 50px;">
+             <iframe style="overflow:hidden;margin:5px 5px auto auto;" class="stretch" scrolling="no" id="chart-productividad" data-chart></iframe>
+             <ul>
+              <li>
+                <small>La productividad actual, contemplando el tiempo hablado y gestiones es de <span style="color: #fcfdfe">73%</span>, esta es muy superior a la productividad recomienda la industria del 60%</small>
+              </li>
+             </ul>
+          </section>
+
         </section>
 
         <section>
@@ -275,7 +276,7 @@
             <small>
               <ul>
                 <li>1 Supervisor (40hs semanales)</li>
-                <li>9 Agentes (33hs semanales c/u)</li>
+                <li>10 Agentes (33hs semanales c/u)</li>
               </ul>
             </small>
             <hr>
@@ -338,6 +339,62 @@
         chart : {
           // Taken from chartjs documentation
           items : [
+          {
+              selector : "#chart-tmo",
+              type : "line",
+              data : {
+                labels: ["ene-21","feb-21","mar-21","abr-21","may-21","jun-21","jul-21","ago-21"],
+                datasets: [
+                  {
+                    label: "TMO",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [217,236,240,237,243,251,253,293]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+          {
+              selector : "#chart-productividad",
+              type : "line",
+              data : {
+                labels: ["ene-21","feb-21","mar-21","abr-21","may-21","jun-21","jul-21","ago-21"],
+                datasets: [
+                  {
+                    label: "Productividad %",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [63,65,63,64,71,70,65,73]
+                  },
+                  {
+                    label: "NS %",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#red",
+                    pointHighlightFill: "#red",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [64,53,72,53,35,39,57,32]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
           {
             selector : "#chart-llamadas",
             type : "doughnut",
