@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <title>Multiline Presentación</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/moon.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" width="45%" height="25%" style="margin: none; background: none; border: none; box-shadow: none;">
+          <p>Plan de Acción - IVR 132</p>
+          <p>
+            <small>Octubre - 2021</small>
+          </p>
+        </section>
+
+        <section>
+          <!-- <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;"> -->
+          <h2>Índice</h2>
+          <ul>
+            <li><a href="#/2">IVR Masivo - Arbol "Soy Santander"</a></li>
+            <li><a href="#/3">IVR Masivo - Arbol "Denuncias"</a></li>
+            <li><a href="#/4">IVR Masivo - Arbol "Banca Online"</a></li>
+            <li><a href="#/5">IVR Masivo - Arbol "Consulta y Solicitudes"</a></li>
+            <li><a href="#/6">IVR No Cliente</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>IVR Masivo - Arbol "Soy Santander"</h2>
+          <img src="img/IVR_132/Cambio SoySantander.jpeg" width="80%" height="80%">
+          <p>
+            <small>Se posiciona en primer lugar la derivación a "AT SoySantander" y luego a Riolux y TocToc.</small>
+          </p>
+        </section>
+
+        <section>
+          <h2>IVR Masivo - Arbol "Denuncias"</h2>
+          <img src="img/IVR_132/Cambio Denuncias.jpeg" width="80%" height="80%">
+          <p>
+            <small>
+              <ol>
+                <li>Denuncia de Tarjeta de Crédito => Derivación AT</li>
+                <li>Denuncia de Tarjeta de Débito en BANRED</li>
+                <li>Cambia el audio a "Denuncia de Fraude Cuenta" => Derivación UIS</li>
+              </ol>
+            </small>
+            </p>
+        </section>
+
+        <section>
+          <h2>IVR Masivo - Arbol "Banca Online"</h2>
+          <img src="img/IVR_132/Cambio Banca Online.jpeg" width="80%" height="80%">
+          <p>
+            <small>
+              Se retira la opción de "Fraude" y queda como derivación directa a UIS
+            </small>
+            </p>
+        </section>
+
+        <section>
+          <section>
+            <h4>IVR Masivo - Arbol "Consulta y Solicitudes" ACTUAL</h4>
+            <img src="img/IVR_132/IVR 132 - Consultas y Solicitudes_Actual.jpeg" width="100%" height="100%">
+          </section>
+          <section>
+            <h4>IVR Masivo - Arbol "Consulta y Solicitudes" PROPUESTA</h4>
+            <img src="img/IVR_132/IVR 132 - Consultas y Solicitudes_Propuesta.jpeg" width="100%" height="100%">
+          </section>
+        </section>
+
+        <section>
+          <h2>IVR No Cliente</h2>
+          <img src="img/IVR_132/IVR 132 No Cliente.jpeg" width="100%" height="100%">
+        </section>
+
+        <section>
+          <section>
+            <img data-src="img/Atencion_ML.png" style="background: none; border: none; box-shadow: none;">
+            <h5>¡Muchas gracias!</h5>
+            <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none;height: 200px;">
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      // Demo Chart RevealJS
+      // https://dvenkatsagar.github.io/prez/reveal-chart.html
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+           // Chart.min.js
+          { src: 'plugin/chartjs/chart.min.js'},
+          // the plugin
+          { src: 'plugin/chartjs/charted.js'},
+
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ],
+        chart : {
+          // Taken from chartjs documentation
+          items : [
+          {
+              selector : "#chart-tmo",
+              type : "line",
+              data : {
+                labels: ["ene-21","feb-21","mar-21","abr-21","may-21","jun-21","jul-21","ago-21"],
+                datasets: [
+                  {
+                    label: "TMO",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [217,236,240,237,243,251,253,293]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+          {
+              selector : "#chart-productividad",
+              type : "line",
+              data : {
+                labels: ["ene-21","feb-21","mar-21","abr-21","may-21","jun-21","jul-21","ago-21"],
+                datasets: [
+                  {
+                    label: "Productividad %",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [63,65,63,64,71,70,65,73]
+                  },
+                  {
+                    label: "NS %",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#red",
+                    pointHighlightFill: "#red",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [64,53,72,53,35,39,57,32]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+          {
+            selector : "#chart-llamadas",
+            type : "doughnut",
+            data : [
+              {
+                value: 1700000,
+                color:"#F7464A",
+                highlight: "#FF5A5E",
+                label: "Llamadas Atendidas"
+              }
+            ]
+            ,
+            options : {
+              percentageInnerCutout : 50,
+              responsive : true
+            }
+          },
+          {
+            selector : "#chart-mails",
+            type : "doughnut",
+            data : [
+              {
+                value: 78000,
+                color:"blue",
+                highlight: "#blue",
+                label: "Mails Respondidos"
+              }
+            ]
+            ,
+            options : {
+              percentageInnerCutout : 50,
+              responsive : true
+            }
+          },
+          {
+            selector : "#chart-chat",
+            type : "doughnut",
+            data : [
+              {
+                value: 96000,
+                color:"green",
+                highlight: "#green",
+                label: "Chat Atendidos"
+              }
+            ]
+            ,
+            options : {
+              percentageInnerCutout : 50,
+              responsive : true
+            }
+          },
+          {
+            selector : "#chart-bot",
+            type : "doughnut",
+            data : [
+              {
+                value: 180000,
+                color:"#46BFBD",
+                highlight: "#5AD3D1",
+                label: "Sesiones BOT"
+              }
+            ]
+            ,
+            options : {
+              percentageInnerCutout : 50,
+              responsive : true
+            }
+          },
+          {
+              selector : "#chart-distribucion",
+              type : "line",
+              data : {
+                labels: ["09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00"],
+                datasets: [
+                  {
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [11,44,58,56,44,51,50,46,40,19,12,7],
+                    label: "Llamadas"
+                  }
+                ]
+              }
+              ,
+              options: {
+                responsive: true,
+              }
+            }
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>
