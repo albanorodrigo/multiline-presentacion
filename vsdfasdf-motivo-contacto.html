@@ -1,0 +1,533 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <title>Multiline Presentación</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/moon.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" width="45%" height="25%" style="margin: none; background: none; border: none; box-shadow: none;">
+          <h2>Motivos de Contacto 132</h2>
+          <p>
+            
+          </p>
+        </section>
+
+      
+    
+        <section>
+          <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+
+          <h5>Principales Motivos</h5><iframe style="overflow:hidden;margin:2px 2px auto auto;" scrolling="no" id="chart-motivos" data-chart></iframe>
+
+          <img data-src="img/SubMotivos.png" style="background: none; border: none; box-shadow: none;">
+        </section>
+
+        <section>
+          
+            <section>
+              <h4>Interacciones Ofrecidas al CC por VQueue 132 (6 meses)</h4>
+              <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 50px;">
+              <img data-src="img/Desglose_VQueue.jpeg" style="background: none; border: none; box-shadow: none;">
+            </section>
+
+            <section>
+              <h4>Ultimo Tramo de Llamada por VQueue 132 (6 meses)</h4>
+              <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 50px;">
+              <img data-src="img/Desglose_VQueue_5.jpeg" style="background: none; border: none; box-shadow: none;">
+            </section>
+            <section>
+              <h3>Cantidad interacciones vs Llamadas únicas</h3>
+              <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 50px;">
+              <hr><br>
+              <h4>
+                <ul>
+                  <ol>Cantidad Interacciones: 612.292</ol>
+                  <ol>Llamadas Únicas: 455.091</ol>
+                  <ol>Únicas VS Interacciones:  <b>74%</b></ol>
+                </ul>
+              </h4>
+              <br><br>
+              <p>Se cuenta con un <i>margen de mejora teórico</i> del <b>26%</b></p>
+            </section>
+            <section>
+              <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 50px;">
+
+              <h4>Distribución por Sectores</h4>
+
+              <img  data-src="img/Desglose_VQueue_4.png" style="background: none; border: none; box-shadow: none;">
+
+            </section>
+
+        </section>
+        
+        <section>
+          <section>
+            <img data-src="img/Atencion_ML.png" style="background: none; border: none; box-shadow: none;">
+            <h5>¡Muchas gracias!</h5>
+            <img data-src="img/Multiline-LOGO-2019-Aplicaciones_Oficial.png" style="background: none; border: none; box-shadow: none;height: 200px;">
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      // Demo Chart RevealJS
+      // https://dvenkatsagar.github.io/prez/reveal-chart.html
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/zoom-js/zoom.js' },
+           // Chart.min.js
+          { src: 'plugin/chartjs/chart.min.js'},
+          // the plugin
+          { src: 'plugin/chartjs/charted.js'},
+
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ],
+        chart : {
+          // Taken from chartjs documentation
+          items : [
+            {
+              selector : "#chart-tmo",
+              type : "line",
+              data : {
+                labels: ["may-20","jun-20","jul-20","ago-20","sep-20","oct-20","nov-20","dic-20","ene-21","feb-21","mar-21","abr-21","may-21"],
+                datasets: [
+                  {
+                    label: "TMO",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [297,279,269,284,294,304,285,298,317,317,324,360,367]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+            {
+              selector : "#chart-productividad",
+              type : "line",
+              data : {
+                labels: ["nov-20","dic-20","ene-21","feb-21","mar-21","abr-21","may-21"],
+                datasets: [
+                  {
+                    label: "Productividad %",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [51,57,58,57,61,70,65]
+                  },
+                  {
+                    label: "NS %",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#red",
+                    pointHighlightFill: "#red",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [80,52,43,56,53,34,59]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+            {
+              selector : "#chart-eficiencia-agente",
+              type : "line",
+              data : {
+                labels: ["Mes 0","Mes 1","Mes 2","Mes 3","Mes 4","Mes 5","Mes 6","Mes 8","Mes 9","Mes 10","Mes 11","Mes 12","Mes 24"],
+                datasets: [
+                  {
+                    label: "Eficiencia %",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [-2,24,42,57,58,55,58,58,53,48,52,42,43]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+            {
+              selector : "#chart-proyeccion-escenarios",
+              type : "radar",
+              data : {
+                labels: ["Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre"],
+                datasets: [
+                  {
+                    label: "NS 85.000",
+                    fillColor: "rgba(151,187,205,0.2)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [43, 48, 53, 58, 63, 68]
+                  },
+                  {
+                    label: "NS 80.000",
+                    fillColor: "rgba(80,100,110,0.2)",
+                    strokeColor: "rgba(80,100,110,1)",
+                    pointColor: "rgba(80,100,110,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [50, 55, 60, 65, 70, 75]
+                  },
+                  {
+                    label: "NS 75.000",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [55, 60, 65, 70, 75, 80]
+                  },
+                  {
+                    label: "NS 70.000",
+                    fillColor: "rgba(80,100,110,0.2)",
+                    strokeColor: "rgba(80,100,110,1)",
+                    pointColor: "rgba(80,100,110,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [58, 63, 68, 73, 78, 83]
+                  },
+                  {
+                    label: "NS 65.000",
+                    fillColor: "rgba(151,187,205,0.2)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [62, 67, 72, 77, 82, 86]
+                  }
+                ]
+              },
+              options :{
+                responsive : true,
+                pointLabelFontSize : 15
+              }
+            },
+            // chart-eficiencia-mail
+            {
+              selector : "#chart-eficiencia-mail",
+              type : "line",
+              data : {
+                labels: ["21/05", "22/05", "24/05", "25/05"],
+                datasets: [
+                  {
+                    label: "Eficiencia +%",
+                    fillColor: "rgba(151,187,205,0.2)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [35, 86, 80, 80]
+                  },
+                  {
+                    label: "Emails Enviados",
+                    fillColor: "rgba(80,100,110,0.2)",
+                    strokeColor: "rgba(80,100,110,1)",
+                    pointColor: "rgba(80,100,110,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [406, 566, 540, 540]
+                  }
+                ]
+              },
+              options :{
+                responsive : true,
+                pointLabelFontSize : 15
+              }
+            },
+            {
+            selector : "#chart-fcr",
+            type : "doughnut",
+            data : [
+              {
+                value: 91,
+                color:"green",
+                highlight: "green",
+                label: "%"
+              },
+              {
+                value: 9,
+                color: "red",
+                highlight: "red",
+                label: "%"
+              }
+              ],
+              options : {
+                percentageInnerCutout : 50,
+                responsive : true
+              }
+            },
+            {
+            selector : "#chart-nps-gral",
+            type : "doughnut",
+            data : [
+              {
+                value: 69,
+                color:"green",
+                highlight: "green",
+                label: "%"
+              },
+              {
+                value: 31,
+                color: "#46BFBD",
+                highlight: "#5AD3D1",
+                label: "%"
+              }
+              ],
+              options : {
+                percentageInnerCutout : 50,
+                responsive : true
+              }
+            },
+            {
+            selector : "#chart-nps-oper",
+            type : "doughnut",
+            data : [
+              {
+                value: 85,
+                color:"green",
+                highlight: "green",
+                label: "%"
+              },
+              {
+                value: 15,
+                color: "#46BFBD",
+                highlight: "#5AD3D1",
+                label: "%"
+              }
+              ],
+              options : {
+                percentageInnerCutout : 50,
+                responsive : true
+              }
+            },
+            {
+              selector : "#chart-motivos",
+              type : "pie",
+              data : [
+                  {
+                    value: 38740,
+                    color:"#F7464A",
+                    highlight: "#FF5A5E",
+                    label: "Tarjeta de Crédito"
+                  },
+                  {
+                    value: 9321,
+                    color: "#46BFBD",
+                    highlight: "#5AD3D1",
+                    label: "Cuentas"
+                  },
+                  {
+                    value: 7380,
+                    color: "#FDB45C",
+                    highlight: "#FFC870",
+                    label: "Tarjeta de Débito"
+                  },
+                  {
+                    value: 5973,
+                    color: "#FFC123",
+                    highlight: "#FFC123",
+                    label: "Supernet"
+                  },
+                  {
+                    value: 4010,
+                    color: "#5AD748",
+                    highlight: "#5AD748",
+                    label: "Prestamos"
+                  },
+                  {
+                    value: 3563,
+                    color: "#FD1234",
+                    highlight: "#FD1234",
+                    label: "Central telefónica"
+                  },
+                  {
+                    value: 1550,
+                    color: "#FD9874",
+                    highlight: "#FD9874",
+                    label: "Seguros"
+                  },
+                  {
+                    value: 1711,
+                    color: "black",
+                    highlight: "#black",
+                    label: "Otros"
+                  },
+
+                ],
+                options : {
+                  responsive : true
+                }
+            },
+            {
+            selector : "#chart-mail-ns-junio",
+            type : "doughnut",
+            data : [
+              {
+                value: 835,
+                color:"#008F39",
+                highlight: "#008F39",
+                label: "Cerrados en 24hs"
+              },
+              {
+                value: 1585,
+                color: "#BDECB6",
+                highlight: "#BDECB6",
+                label: "Cerrados en 48hs"
+              },
+              {
+                value: 265,
+                color: "#EA899A",
+                highlight: "#EA899A",
+                label: "Fuera Nivel"
+              }
+              ],
+              options : {
+                percentageInnerCutout : 50,
+                responsive : true
+              }
+            },
+            {
+              selector : "#chart-tmo-chat",
+              type : "line",
+              data : {
+                labels: ["may-20","jun-20","jul-20","ago-20","sep-20","oct-20","nov-20","dic-20","ene-21","feb-21","mar-21","abr-21"],
+                datasets: [
+                  {
+                    label: "TMO",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [460,499,461,527,570,529,531,481,474,500,506,677]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+            {
+              selector : "#chart-volumen-chat",
+              type : "line",
+              data : {
+                labels: ["may-20","jun-20","jul-20","ago-20","sep-20","oct-20","nov-20","dic-20","ene-21","feb-21","mar-21","abr-21"],
+                datasets: [
+                  {
+                    label: "TMO",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [25424,26394,29282,9696,11375,12197,10163,13151,13318,11725,15256,15564]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            },
+            {
+              selector : "#chart-proy-vs-proyectado-chat",
+              type : "line",
+              data : {
+                labels: ["may-20","jun-20","jul-20","ago-20","sep-20","oct-20","nov-20","dic-20","ene-21","feb-21","mar-21","abr-21"],
+                datasets: [
+                  {
+                    label: "Proyectado",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [28500,26208,28750,9880,12100,12390,12390,10668,11894,12618,14973,12540]
+                  },
+                  {
+                    label: "Recibidos",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#red",
+                    pointHighlightFill: "#red",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [25424,26394,29282,9696,11375,12197,10163,13151,13318,11725,15256,15564]
+                  }
+                ]
+              }
+              ,
+              options : {
+                responsive:true
+              }
+            }
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>
